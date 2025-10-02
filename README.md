@@ -22,5 +22,8 @@ This is a minimal simulation of RSA decryption using classical logic inspired by
 
 📌 **Note**
 
->This code was written purely for educational purposes and does not reflect any production-grade implementation.
-> 📄 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+>This project is designed for **educational and demonstration purposes only.**  
+>It does **not represent a practical or production-level implementation**, and does **not endorse** misuse of cryptographic simulations.
+>
+>
+>📄 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
