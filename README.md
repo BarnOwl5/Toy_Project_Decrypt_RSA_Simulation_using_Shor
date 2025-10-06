@@ -1,18 +1,61 @@
-# 🔐 Toy RSA Decryption via Shor (Mock)
+## 🔐 Toy Project: Decrypt RSA Simulation using Shor’s Algorithm
 
-This is a minimal simulation of RSA decryption using classical logic inspired by Shor’s algorithm.
+### 📌 Overview
 
-## 📄 What’s inside?
+This project is a **toy simulation** that demonstrates the basic concept of RSA encryption and classical emulation of **Shor's algorithm** (used for factoring large integers efficiently using quantum computation).
+It's built for educational and experimental purposes to illustrate how factorization can potentially break RSA-based encryption systems.
 
-- A single Python script (`RSA_Decryption_Via_Shor.py`)
-- Demonstrates:
-  - RSA encryption/decryption
-  - Period finding
-  - Factoring small RSA moduli
-  - Full attack flow (from ciphertext to recovered plaintext)
+You can check the details here:
+[Toy Project: Decrypt RSA with Shor](https://www.notion.so/Toy-Project-Decrypt-RSA-with-Shor-280224f27a318002b2cfcc7bee1acaa0?source=copy_link)
+### ⚙️ Features
+  - **RSA Key Generation** (prime selection, φ(n) computation, modular inverse)
+  - **Encryption / Decryption** using modular exponentiation 
+  - **Shor's Algorithm (mock)** – classical brute-force period-finding simulation
+  - **Factor Recovery Demo** – simple flow from ciphertext to recovered plaintext
 
- ☕ Coffee not included, but highly recommended.
 
+### 🧮 File Structure  
+
+```bash
+Toy_Project_Decrypt_RSA_Simulation_using_Shor/
+├── images
+├── rsa_shor_demo.py        # Main simulation script
+└── README.md               # Project overview and notes
+```
+
+
+### 🧰 Code Highlights
+
+Function | Description
+|--      |--
+`RSA_BASE.__init__()` | Generates primes `p`, `q`, computes `n`, `phi`, and keys
+`_pick_e()` | Selects an encryption exponent `e` coprime to `φ(n)`
+`encrypt() / decrypt()` | Implements RSA encryption and decryption
+`find_period()` | Brute-force search for period `r` where `aʳ ≡ 1` (mod N)
+`shor_factor_mock()` | Classical simulation of Shor’s factorization
+`demo()` | Demonstrates full process — keygen → encrypt → factor → decrypt
+
+### 🧩 Example Execution
+
+Run:
+```bash
+python rsa_shor_demo.py
+```
+
+Example Output:
+```bash
+=== Step 1: RSA Key Generation ===
+p=13, q=23, n=299
+e=65537, d=12313
+
+=== Step 2: Encryption ===
+Plaintext: "time is gold"
+Ciphertext: [encrypted values]
+
+=== Step 3: Factorization Simulation ===
+Found factors: (13, 23)
+Recovered plaintext: "time is gold"
+```
 <details>
   <summary>🖥️ View Output Screenshot</summary>
 
@@ -20,10 +63,22 @@ This is a minimal simulation of RSA decryption using classical logic inspired by
 
 </details>
 
-📌 **Note**
+
+
+### 🚀 Educational Notes
+
+This project demonstrates:
+
+- The vulnerability of RSA under quantum algorithms like Shor’s.
+- How period finding leads to factorization.
+- The importance of quantum-resistant cryptography (PQC) for the future.
+
+---
+### 📌 **Note**
 
 >This project is designed for **educational and demonstration purposes only.**  
 >It does **not represent a practical or production-level implementation**, and does **not endorse** misuse of cryptographic simulations.
 >
 >
 >📄 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
