@@ -19,7 +19,7 @@ You can check the details here:
 ```bash
 Toy_Project_Decrypt_RSA_Simulation_using_Shor/
 ├── images
-├── rsa_shor_demo.py        # Main simulation script
+├── RSA_Decryption_Via_Shor.py # Main simulation script
 └── README.md               # Project overview and notes
 ```
 
@@ -39,7 +39,7 @@ Function | Description
 
 Run:
 ```bash
-python rsa_shor_demo.py
+python RSA_Decryption_Via_Shor.py
 ```
 
 Example Output:
