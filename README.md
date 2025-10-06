@@ -45,15 +45,18 @@ python rsa_shor_demo.py
 Example Output:
 ```bash
 === Step 1: RSA Key Generation ===
-p=13, q=23, n=299
-e=65537, d=12313
+p=13, q=23, n=299, phi=264
+e=5, d=53
 
 === Step 2: Encryption ===
 Plaintext: "time is gold"
-Ciphertext: [encrypted values]
+Ciphertext: [116, 27, 44, 238, 54, 27, 46, 54, 51, 11, 75, 16]
 
 === Step 3: Factorization Simulation ===
 Found factors: (13, 23)
+
+=== Step 4: Factor Recovery & Decryption ===
+Recovered private key d: 53
 Recovered plaintext: "time is gold"
 ```
 <details>
